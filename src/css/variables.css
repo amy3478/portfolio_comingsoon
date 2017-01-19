@@ -1,0 +1,20 @@
+
+/* Typography */
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+$font-family-serif:       'Anton', 'PT Serif', "Times New Roman", Times, serif !default;
+
+$white: #fff;
+
+$amy-red: #FF6052;
+$amy-black: #3B3C3C;
+$amy-gray: #545454;
+$amy-gray-light: #aaa;
+$amy-blue: #52A3FF;
+
+$bp-small : 29.75em;
+$bp-med : 48em;
+$bp-large : 54.5em;
+$bp-xl : 76em;
+
+@custom-media --small-viewport (max-width: $bp-small);

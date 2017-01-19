@@ -1,30 +1,72 @@
-$white: #fff;
+@import './css/normalize.css';
+@import './css/variables.css';
 
-.App {
-  text-align: center;
+body, html, #root {
+  height: 100%;
+}
+body {
+	font-family: $font-family-serif;
+	line-height: 1.25;
+	color: $amy-black;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+a {
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+	color: $amy-black;
+ 	text-decoration: none;
+	&:hover {
+		color: $amy-red;
+	}
+}
+h1 {
+	font-family: $font-family-serif;
+	margin: 1.45rem 0;
+
+
+	@media (--small-viewport) {
+		font-size: 1.25em;
+	}
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: $white;
+@lost flexbox flex;
+
+.container {
+  lost-center: 100%;
+  lost-align: center;
+
+  height: 100%;
+
+  .particles {
+    position: relative;
+    cursor: default;
+    font-size: 1.6em;
+    text-shadow: 0 6px 24px rgba(14,21,47,0.3);
+
+    transition: text-shadow .5s ease, transform .2s ease; 
+    &:hover {
+      text-shadow:0 16px 40px rgba(14,21,47,0.4), 0 10px 24px rgba(14,21,47,0.3);
+    }
+    >.particle {
+      opacity:0;
+      position: absolute;
+      background-color:color(#FF6052 alpha(50%));
+      animation: particles 2s ease-in infinite;
+      border-radius:100%;
+    }
+  }
 }
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-@for $i from 10 to 30 by 10 {
-  .col-$i { width: $i%; }
+@keyframes particles {
+   0% {
+      opacity: 0;
+   }
+   20% { 
+      opacity: 1;
+      transform:translate(0, -20%);
+   }
+   100% {
+      opacity: 0;
+      transform:translate(0, -1200%); 
+   }
 }
