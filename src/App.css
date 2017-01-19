@@ -41,7 +41,7 @@ h1 {
     position: relative;
     cursor: default;
     font-size: 1.6em;
-    text-shadow: 0 6px 24px rgba(14,21,47,0.3);
+    // text-shadow: 0 6px 24px rgba(14,21,47,0.3);
 
     transition: text-shadow .5s ease, transform .2s ease; 
     &:hover {

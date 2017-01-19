@@ -25,10 +25,16 @@ class App extends Component {
 
 
     if(supportsTouch){
+      window.preventScroll = false;
       container.ontouchstart = function(e) {
+        window.preventScroll = true;
         container.className += ' active';
+        container.style.textShadow = "0 8px 20px rgba(14,21,47,0.2), 0 4px 12px rgba(14,21,47,0.3)";
       }
       container.ontouchmove = function(e) {
+        if (window.preventScroll){
+          e.preventDefault();
+        }
         let bd = document.getElementsByTagName('body')[0],
             bdsl = bd.scrollLeft,
             pageX = e.touches[0].pageX,
@@ -44,13 +50,16 @@ class App extends Component {
             imgCSS = 'rotateX(' + xRotate + 'deg) rotateY(' + yRotate + 'deg)';
 
         if(container.className.indexOf(' active') !== -1){
-            imgCSS += ' scale3d(1.02,1.02,1.02)';
+            imgCSS += ' scale3d(1.1,1.1,1.1)';
         }
         container.style.transform = imgCSS;
+        
       }
       container.ontouchend = function(e) {
-          container.className = container.className.replace(' active','');
-          container.style.transform = '';
+        window.preventScroll = false;
+        container.className = container.className.replace(' active','');
+        container.style.transform = '';
+        container.style.textShadow = '';
       };
     } else {
       container.onmouseenter = function(e) {
