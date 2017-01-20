@@ -1,8 +1,10 @@
 
 /* Typography */
 @import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
 
-$font-family-serif:       'Anton', 'PT Serif', "Times New Roman", Times, serif !default;
+$font-family-serif: 'Anton', 'PT Serif', "Times New Roman", Times, serif !default;
+$font-pt-sans: 'PT Sans', sans;
 
 $white: #fff;
 

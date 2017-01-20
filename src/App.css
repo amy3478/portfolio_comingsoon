@@ -28,13 +28,15 @@ h1 {
 		font-size: 1.25em;
 	}
 }
-
+.absolute {
+  position: absolute;
+}
 @lost flexbox flex;
 
 .container {
   lost-center: 100%;
   lost-align: center;
-
+  flex-direction: column;
   height: 100%;
 
   .particles {
@@ -55,6 +57,12 @@ h1 {
       border-radius:100%;
     }
   }
+}
+
+.msg {
+  bottom: 16px;
+  font-family: $font-pt-sans;
+  color: #999;
 }
 
 @keyframes particles {

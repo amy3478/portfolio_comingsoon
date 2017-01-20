@@ -57,7 +57,8 @@
     },
     "dependencies": {
         "react": "^15.4.2",
-        "react-dom": "^15.4.2"
+        "react-dom": "^15.4.2",
+        "react-fontawesome": "^1.5.0"
     },
     "scripts": {
         "start": "node scripts/start.js",
@@ -68,9 +69,15 @@
         "surge": "node scripts/predeploy.js -surge&&yarn build&&cd build&&surge"
     },
     "jest": {
-        "collectCoverageFrom": ["src/**/*.{js,jsx}"],
-        "setupFiles": ["<rootDir>/config/polyfills.js"],
-        "testPathIgnorePatterns": ["<rootDir>[/\\\\](build|docs|node_modules)[/\\\\]"],
+        "collectCoverageFrom": [
+            "src/**/*.{js,jsx}"
+        ],
+        "setupFiles": [
+            "<rootDir>/config/polyfills.js"
+        ],
+        "testPathIgnorePatterns": [
+            "<rootDir>[/\\\\](build|docs|node_modules)[/\\\\]"
+        ],
         "testEnvironment": "node",
         "testURL": "http://localhost",
         "transform": {
@@ -78,13 +85,17 @@
             "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
             "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
         },
-        "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"],
+        "transformIgnorePatterns": [
+            "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+        ],
         "moduleNameMapper": {
             "^react-native$": "react-native-web"
         }
     },
     "babel": {
-        "presets": ["react-app"]
+        "presets": [
+            "react-app"
+        ]
     },
     "eslintConfig": {
         "extends": "react-app"

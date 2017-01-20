@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import "./App.css";
+import FontAwesome from "react-fontawesome";
 
 class App extends Component {
 
@@ -124,10 +125,11 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <span className="particletext particles" ref="particles">
+        <p className="particletext particles" ref="particles">
           Stay Tuned
           {this.renderParticles()}
-        </span>
+        </p>
+        <p className="msg">Or buy me a soy latte? <a href="mailto:amyyimingpu@gmail.com" target="_top"> <FontAwesome name='envelope' /></a></p>
       </div>
     );
   }
